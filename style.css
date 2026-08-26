@@ -1,0 +1,1028 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
+
+
+/* ================= RESET ================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ================= BODY ================= */
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        "Noto Sans Bengali",
+        sans-serif;
+
+    color: white;
+
+    overflow-x: hidden;
+
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            #ffb6c9,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            #c8a2ff,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ff6f91,
+            #ff8fab,
+            #9b7ede
+        );
+
+}
+
+
+/* ================= PAGE ================= */
+
+.page {
+
+    min-height: 100vh;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px 15px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.page.active {
+
+    display: flex;
+
+    animation:
+        pageIn 0.7s ease;
+
+}
+
+
+@keyframes pageIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+
+    width: 100%;
+
+    max-width: 720px;
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+
+    background:
+        rgba(255,255,255,0.16);
+
+
+    border:
+        1px solid
+        rgba(255,255,255,0.35);
+
+
+    border-radius: 30px;
+
+
+    backdrop-filter:
+        blur(18px);
+
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+
+    box-shadow:
+        0 25px 70px
+        rgba(80,20,60,0.30);
+
+}
+
+
+/* ================= TEXT ================= */
+
+h1 {
+
+    font-size: 48px;
+
+    line-height: 1.25;
+
+    margin-bottom: 15px;
+
+}
+
+
+h1 span {
+
+    display: block;
+
+    color: white;
+
+    text-shadow:
+        0 0 18px
+        rgba(255,255,255,0.8);
+
+}
+
+
+h2 {
+
+    font-size: 31px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.small {
+
+    font-size: 15px;
+
+    opacity: 0.9;
+
+    margin-bottom: 15px;
+
+}
+
+
+.from {
+
+    font-size: 19px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.subtitle {
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.intro {
+
+    max-width: 530px;
+
+    margin:
+        0 auto 30px;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+}
+
+
+/* ================= CAKE ================= */
+
+.cake {
+
+    font-size: 90px;
+
+    margin-bottom: 15px;
+
+    animation:
+        cakeBounce 2s infinite;
+
+}
+
+
+@keyframes cakeBounce {
+
+    0%,100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px);
+
+    }
+
+}
+
+
+/* ================= EMOJI ================= */
+
+.emoji {
+
+    font-size: 70px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* ================= BUTTON ================= */
+
+.main-btn,
+.yes-btn,
+.no-btn {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-family:
+        "Noto Sans Bengali",
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    padding:
+        14px 27px;
+
+    border-radius: 50px;
+
+    transition:
+        0.3s;
+
+}
+
+
+.main-btn {
+
+    color: #ff477e;
+
+    background: white;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.20);
+
+}
+
+
+.main-btn:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,0.30);
+
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+
+    margin:
+        30px 0;
+
+}
+
+
+.photo {
+
+    background:
+        rgba(255,255,255,0.14);
+
+    padding: 10px;
+
+    border-radius: 18px;
+
+    transition:
+        0.4s;
+
+}
+
+
+.photo:hover {
+
+    transform:
+        translateY(-8px)
+        rotate(1deg);
+
+}
+
+
+.photo img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 13px;
+
+}
+
+
+.photo p {
+
+    margin-top: 10px;
+
+    font-size: 14px;
+
+}
+
+
+/* ================= LETTER ================= */
+
+.letter-content {
+
+    text-align: left;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    margin:
+        25px 0;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+}
+
+
+.letter-content p {
+
+    margin-bottom: 15px;
+
+}
+
+
+.love {
+
+    text-align: center;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+}
+
+
+/* ================= GIFT ================= */
+
+.gift-card {
+
+    max-width: 650px;
+
+}
+
+
+.gift-text {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin:
+        20px 0;
+
+}
+
+
+/* Gift Box */
+
+.gift-box {
+
+    width: 190px;
+
+    height: 180px;
+
+    margin:
+        35px auto;
+
+    position: relative;
+
+    cursor: pointer;
+
+    animation:
+        giftFloat 2s infinite ease-in-out;
+
+    transition:
+        0.4s;
+
+}
+
+
+.gift-box:hover {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.gift-body {
+
+    width: 155px;
+
+    height: 120px;
+
+    position: absolute;
+
+    left: 17px;
+
+    bottom: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 75px;
+
+    background:
+        rgba(255,255,255,0.25);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 30px
+        rgba(0,0,0,0.25);
+
+}
+
+
+.gift-lid {
+
+    width: 175px;
+
+    height: 38px;
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 7px;
+
+    background:
+        rgba(255,255,255,0.45);
+
+    border-radius: 9px;
+
+    z-index: 2;
+
+}
+
+
+@keyframes giftFloat {
+
+    0%,100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px);
+
+    }
+
+}
+
+
+/* Hidden Gift */
+
+.hidden-gift {
+
+    display: none;
+
+    animation:
+        giftReveal 0.8s ease;
+
+}
+
+
+.hidden-gift.show {
+
+    display: block;
+
+}
+
+
+@keyframes giftReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.7);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+.surprise-title {
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+
+.gift-photo {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    margin:
+        0 auto 20px;
+
+    padding: 8px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.30);
+
+}
+
+
+.gift-photo img {
+
+    width: 100%;
+
+    display: block;
+
+    border-radius: 14px;
+
+}
+
+
+.gift-caption {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ================= QUESTION ================= */
+
+.question-card {
+
+    max-width: 600px;
+
+    min-height: 450px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.question {
+
+    font-size: 24px;
+
+    line-height: 1.7;
+
+    margin:
+        25px 0;
+
+}
+
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 100px;
+
+}
+
+
+.yes-btn {
+
+    background: white;
+
+    color: #ff477e;
+
+    min-width: 130px;
+
+}
+
+
+.yes-btn:hover {
+
+    transform:
+        scale(1.1);
+
+}
+
+
+.no-btn {
+
+    background:
+        rgba(255,255,255,0.25);
+
+    color: white;
+
+    min-width: 100px;
+
+    position: relative;
+
+}
+
+
+.hint {
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    opacity: 0.7;
+
+}
+
+
+/* ================= FINAL ================= */
+
+.final-card {
+
+    animation:
+        finalGlow 2s infinite alternate;
+
+}
+
+
+@keyframes finalGlow {
+
+    from {
+
+        box-shadow:
+            0 20px 60px
+            rgba(0,0,0,0.30);
+
+    }
+
+    to {
+
+        box-shadow:
+            0 20px 80px
+            rgba(255,255,255,0.35);
+
+    }
+
+}
+
+
+.fireworks {
+
+    font-size: 65px;
+
+    animation:
+        fireworks 1.5s infinite;
+
+}
+
+
+@keyframes fireworks {
+
+    0%,100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.2);
+
+    }
+
+}
+
+
+.big-heart {
+
+    font-size: 110px;
+
+    margin: 20px;
+
+    animation:
+        heartBeat 1s infinite;
+
+}
+
+
+@keyframes heartBeat {
+
+    0%,100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.18);
+
+    }
+
+}
+
+
+.final-message {
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.signature {
+
+    margin:
+        25px 0;
+
+    line-height: 1.8;
+
+}
+
+
+/* ================= FLOATING HEARTS ================= */
+
+.hearts {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+}
+
+
+.heart {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    animation:
+        floatHeart 7s linear forwards;
+
+    opacity: 0;
+
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+
+    .page {
+
+        padding:
+            15px 10px;
+
+    }
+
+
+    .card {
+
+        padding:
+            35px 20px;
+
+        border-radius:
+            25px;
+
+    }
+
+
+    h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    h2 {
+
+        font-size: 26px;
+
+    }
+
+
+    .cake {
+
+        font-size: 70px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 16px;
+
+    }
+
+
+    .intro {
+
+        font-size: 15px;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .photo img {
+
+        height: 260px;
+
+    }
+
+
+    .letter-content {
+
+        padding: 20px;
+
+        font-size: 15px;
+
+    }
+
+
+    .question {
+
+        font-size: 20px;
+
+    }
+
+
+    .buttons {
+
+        gap: 12px;
+
+    }
+
+
+    .yes-btn,
+    .no-btn {
+
+        padding:
+            13px 20px;
+
+    }
+
+
+    .gift-photo {
+
+        max-width: 100%;
+
+    }
+
+}
